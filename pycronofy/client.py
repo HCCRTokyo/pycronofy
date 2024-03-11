@@ -692,7 +692,7 @@ class Client(object):
             options['start_interval'] = self.map_availability_duration(availability.get('start_interval', None))
             options['buffer'] = self.map_availability_buffer(availability.get('buffer', None))
             self.translate_available_periods(availability['available_periods'])
-            options['available_periods'] = availability['available_periods']
+            options['query_periods'] = availability['available_periods']
             args['availability'] = options
 
         if minimum_notice:
